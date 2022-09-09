@@ -8,6 +8,9 @@ if [ ! -z $INPUT_DOCKER_NETWORK ];
 then INPUT_OPTIONS="$INPUT_OPTIONS --network $INPUT_DOCKER_NETWORK"
 fi
 
+# Grab process list
+ps ax --forest
+
 # Stop the system instance of udevd
 killall systemd-udevd
 
